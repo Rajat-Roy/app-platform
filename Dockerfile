@@ -30,4 +30,5 @@ RUN apt-get install -y cron
 ADD ./ /src
 # run entrypoint.sh
 # CMD gunicorn TaxiTrip.wsgi -b 0.0.0.0:8080 --reload --timeout 120
+RUN chmod 777 /src 
 CMD service cron start; python manage.py crontab add; python manage.py runserver 0.0.0.0:8080 --noreload & python manage.py run_huey;
