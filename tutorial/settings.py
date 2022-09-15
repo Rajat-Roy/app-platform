@@ -47,9 +47,10 @@ INSTALLED_APPS = [
 ]
 
 HUEY = {
-    'huey_class': 'huey.SqliteHuey',  # Huey implementation to use.
+    'huey_class': 'huey.FileHuey',  # Huey implementation to use.
     'name': 'huey',  # Use db name for huey.
-    'filename': 'tasks.sqlite3',
+    # 'filename': 'tasks.sqlite3',
+    'path': './',
     'results': True,  # Store return values of tasks.
     'store_none': False,  # If a task returns None, do not save to results.
     'immediate': False,  # If DEBUG=True, run synchronously.

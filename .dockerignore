@@ -24,4 +24,5 @@
 **/values.dev.yaml
 venv
 **/*.sqlite3*
+**/.lock
 README.md
