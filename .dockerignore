@@ -23,4 +23,5 @@
 **/secrets.dev.yaml
 **/values.dev.yaml
 venv
+**/*.sqlite3*
 README.md
